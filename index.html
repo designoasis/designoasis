@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="제주 서귀포 한라산 중산간의 여유, 오아시스휴양펜션">
+  <title>오아시스휴양펜션 | 제주 서귀포</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="오아시스휴양펜션 홈">
+      <span class="brand-mark">O</span><span>OASIS <small>PENSION · JEJU</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
+    <nav id="mainNav">
+      <a href="#about">ABOUT</a><a href="#rooms">ROOMS</a><a href="#special">SPECIAL</a>
+      <a href="#reservation" class="nav-book">예약하기</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A QUIET PLACE IN JEJU</p>
+        <h1>제주의 자연 속에서<br>천천히 쉬어가세요</h1>
+        <p>한라산 중산간의 맑은 공기, 넓은 정원과 여유로운 하루</p>
+        <a class="button button-light" href="#rooms">객실 둘러보기 <span>→</span></a>
+      </div>
+      <div class="hero-note">JEJU · SEOGWIPO</div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="section-kicker">WELCOME TO OASIS</div>
+      <h2>머무는 시간마저<br><em>여행이 되는 곳</em></h2>
+      <p class="intro-copy">오아시스휴양펜션은 제주 서귀포의 한라산 중산간에 자리한 조용한 휴식 공간입니다. 넓은 잔디 정원과 제주의 자연 풍경 속에서 편안한 시간을 보내세요.</p>
+      <div class="feature-row">
+        <div><span>01</span><b>넓은 정원</b><small>초록 풍경과 여유로운 산책</small></div>
+        <div><span>02</span><b>개별 테라스</b><small>객실별 야외 휴식 공간</small></div>
+        <div><span>03</span><b>서귀포 입지</b><small>주요 관광지와 편리한 이동</small></div>
+      </div>
+    </section>
+
+    <section class="rooms section" id="rooms">
+      <div class="section-heading">
+        <div><div class="section-kicker">OUR ROOMS</div><h2>편안한 객실을 만나보세요</h2></div>
+        <p>여행의 목적과 인원에 맞는 객실을 선택해 보세요.</p>
+      </div>
+      <div class="room-grid" id="roomGrid"></div>
+    </section>
+
+    <section class="special section" id="special">
+      <div class="special-image"><div class="image-placeholder"><span>OASIS GARDEN</span></div></div>
+      <div class="special-copy">
+        <div class="section-kicker">SPECIAL MOMENTS</div>
+        <h2>제주에서 누리는<br><em>작은 여유</em></h2>
+        <p>넓은 잔디 정원, 객실 테라스, 개별 바비큐 공간. 오아시스에서 자연과 함께 쉬어가세요.</p>
+        <a class="text-link" href="#reservation">예약 문의하기 <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="reservation section" id="reservation">
+      <div class="section-kicker">RESERVATION</div>
+      <h2>예약 신청</h2>
+      <p class="section-lead">원하시는 일정과 객실을 선택해 주세요. 신청 후 관리자가 확인하여 예약 확정 여부를 안내드립니다.</p>
+      <form id="bookingForm">
+        <div class="form-grid">
+          <label>체크인<input type="date" name="checkin" id="checkin" required></label>
+          <label>체크아웃<input type="date" name="checkout" id="checkout" required></label>
+          <label class="wide">객실<select name="roomCode" id="roomSelect" required><option value="">객실을 선택하세요</option></select></label>
+          <label>성인<select name="adults" required><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+          <label>아동<select name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+          <label>예약자 성함<input name="guestName" maxlength="30" autocomplete="name" required placeholder="성함을 입력하세요"></label>
+          <label>연락처<input name="phone" type="tel" maxlength="20" autocomplete="tel" required placeholder="010-0000-0000"></label>
+          <label class="wide">요청사항<textarea name="memo" rows="3" maxlength="500" placeholder="문의사항이나 요청사항을 입력하세요"></textarea></label>
+        </div>
+        <label class="agree"><input type="checkbox" required> 개인정보 수집 및 예약 안내를 위한 이용에 동의합니다.</label>
+        <button class="button button-dark" type="submit" id="submitBtn">예약 신청하기 <span>→</span></button>
+        <p class="form-message" id="formMessage" role="status"></p>
+        <p class="fine-print">예약 신청은 확정이 아닙니다. 관리자가 객실 가능 여부를 확인한 후 별도로 연락드립니다.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">OASIS PENSION</div>
+    <p>오아시스휴양펜션 · 제주특별자치도 서귀포시</p>
+    <p>전화번호와 정확한 주소를 실제 정보로 수정해 주세요.</p>
+    <small>© OASIS PENSION. All rights reserved.</small>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
